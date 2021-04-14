@@ -22,7 +22,12 @@ root = ""
 while not done:
     try:
         name = input("The name of the project: ")
-        root = os.path.join(DEFAULT_ROOT, kind, DEF_INNER_FOLDER, name)
+
+        if kind == "XD": 
+            root = os.path.join(DEFAULT_ROOT, kind, name)
+        else:
+            root = os.path.join(DEFAULT_ROOT, kind, DEF_INNER_FOLDER, name)
+            
         os.makedirs(root)
         done = True
         print("Project folder created!")
@@ -34,7 +39,7 @@ while not done:
 try:
     os.makedirs(os.path.join(root, DEF_SRC_FOLDER_NAME))
     
-    if kind is not "XD":
+    if kind != "XD":
         os.makedirs(os.path.join(root, DEF_PRJ_FOLDER_NAME))
         print("Project preset folders created!")
         open(os.path.join(root, DEF_PRJ_FOLDER_NAME, name + FORMAT_DICT.get(kind)), 'x').close()
@@ -42,3 +47,5 @@ try:
 
 except OSError:
     print("Error")
+
+os.startfile(str(root))
