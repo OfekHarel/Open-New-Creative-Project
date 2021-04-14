@@ -10,6 +10,7 @@ FORMAT_DICT = {"C4D": r'C:\Program Files\Maxon Cinema 4D R21\Cinema 4D.exe',
 DEF_PRJ_FOLDER_NAME = "Project"
 DEF_SRC_FOLDER_NAME = "Resources"
 
+os.system('cls')
 print("Open your new project here:")
 
 kind = input("Which platform? " + str(DEF_KINDS) + ": ")
