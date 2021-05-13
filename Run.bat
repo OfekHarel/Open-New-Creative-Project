@@ -1,4 +1,4 @@
-cd "A:\Software Dev\Projects\NewEditHelper"
+cd "A:\Software Dev\Projects\Open-New-Creative-Project"
 
 python Edit.py
 
